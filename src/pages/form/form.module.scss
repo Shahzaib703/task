@@ -1,0 +1,41 @@
+@import "styles/_breakpoints.scss";
+@import "styles/_colors.scss";
+@import "styles/_mixin.scss";
+
+.grid {
+  @include gridTwo(20, 80);
+  .phone {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    .select {
+      width: 100px;
+    }
+  }
+}
+label {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: capitalize;
+  color: #181111;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 100px;
+  button {
+    box-shadow: none;
+    background-color: #181111;
+    color: #ffffff;
+    font-weight: bold;
+    border: 1px solid #181111;
+    font-size: 16px;
+    border-radius: 6px;
+    min-width: 300px;
+    padding: 15px 10px;
+  }
+}

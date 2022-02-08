@@ -1,0 +1,43 @@
+@import "styles/_breakpoints.scss";
+@import "styles/_colors.scss";
+@import "styles/_mixin.scss";
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 25px;
+  width: 100%;
+  label {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: #181111;
+    margin-bottom: 10px;
+  }
+  input {
+    border-radius: 3px;
+    padding: 10px 8px;
+    width: 100%;
+    height: 55px;
+    box-shadow: 0 1px 8px 0 rgb(0 0 0 / 10%);
+    background-color: #ffffff;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: #d6d9d9;
+      text-transform: capitalize;
+      font-size: 16px;
+      font-family: Roboto;
+    }
+  }
+
+  .errorMessage {
+    color: $danger;
+    font-size: 12px;
+    position: absolute;
+    bottom: -17px;
+  }
+}
