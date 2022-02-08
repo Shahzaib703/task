@@ -10,12 +10,21 @@ const Form = () => {
 
   const [email, setemail] = useState("");
 
-  const [gender, setgender] = useState("");
+  const gender = useRef();
+
 
   const [phone, setphone] = useState("");
 
   const submit = (e) => {
-
+    
+    let sex = gender.current.value;
+    
+    if(!sex){
+      alert("gender must be selected")
+      return
+    }
+    
+    
     if(name===""){
       alert("Name should not be empty")
       return;
@@ -45,7 +54,7 @@ const Form = () => {
         name: name,
         email: email,
         phone: phone,
-        gender: gender,
+        gender: sex,
       }),
     });
   };
@@ -82,7 +91,7 @@ function set(e){
           <Select
             label="Gender"
             placeHolder="Gender"
-            onChange={e => setgender(e.target.value)}
+            inputRef ={gender}
             options={options}
           />
           <Input
